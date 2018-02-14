@@ -1,28 +1,19 @@
-$red: #fe344c;
-
 /*Mixins*/
-@mixin centerAlign{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);  
+@import url(https://fonts.googleapis.com/css?family=Mr+De+Haviland);
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #fe344c;
+  font-weight: 100;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-html, body{
-    height: 100%;
-    width: 100%;
-    background-color: $red;
-    font-weight: 100;
-    overflow: hidden;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.invisible{
+.invisible {
   opacity: 0;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Mr+De+Haviland);
-.heading{
+.heading, .love {
   color: white;
   font-weight: 100;
   font-size: 500%;
@@ -31,135 +22,139 @@ html, body{
   position: absolute;
   white-space: nowrap;
   top: 80%;
-  transform: translateY(-80%);
+  -webkit-transform: translateY(-80%);
+          transform: translateY(-80%);
   font-family: 'Mr De Haviland', cursive;
 }
 
-.love-container{
+.love-container {
   opacity: 0;
   visibility: hidden;
 }
-.love{
-  @extend .heading;
-}
 
-.heart-container{
+.heart-container {
   width: 100%;
   height: 50%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   text-align: center;
-  #heart-svg{
-    margin-top: 50px;
-    height: 70%;
-    width: 20%;
-    cursor: pointer;
-    opacity: 0;
-    #heart{
-      fill: white;
-    }  
-  }
+}
+.heart-container #heart-svg {
+  margin-top: 50px;
+  height: 70%;
+  width: 20%;
+  cursor: pointer;
+  opacity: 0;
+}
+.heart-container #heart-svg #heart {
+  fill: white;
 }
 
-
-#little-heart1{
+#little-heart1, #little-heart2, #little-heart3, #little-heart4, #little-heart5, #little-heart6, #little-heart7, #little-heart8, #little-heart9, #little-heart10 {
   height: 100px;
   width: 100px;
   position: absolute;
   top: 100%;
   left: 5%;
-  transform: rotate(-5deg);
-  .heart{
-    fill: white;
-  }
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+#little-heart1 .heart, #little-heart2 .heart, #little-heart3 .heart, #little-heart4 .heart, #little-heart5 .heart, #little-heart6 .heart, #little-heart7 .heart, #little-heart8 .heart, #little-heart9 .heart, #little-heart10 .heart {
+  fill: white;
 }
 
-#little-heart2{
-  @extend #little-heart1;
+#little-heart2 {
   height: 50px;
   width: 50px;
   left: 17%;
-  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
 }
-#little-heart3{
-  @extend #little-heart1;
+
+#little-heart3 {
   height: 75px;
   width: 75px;
   left: 20%;
-  transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
 }
-#little-heart4{
-  @extend #little-heart1;
+
+#little-heart4 {
   height: 20px;
   width: 20px;
   left: 12%;
-  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
 }
-#little-heart5{
-  @extend #little-heart1;
+
+#little-heart5 {
   height: 50px;
   width: 50px;
   left: 10%;
 }
-#little-heart6{
-  @extend #little-heart1;
+
+#little-heart6 {
   height: 30px;
   width: 30px;
   left: 70%;
-  transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
 }
-#little-heart7{
-  @extend #little-heart1;
+
+#little-heart7 {
   height: 20px;
   width: 20px;
   left: 85%;
-  transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
 }
-#little-heart8{
-  @extend #little-heart1;
+
+#little-heart8 {
   height: 80px;
   width: 80px;
   left: 75%;
-  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
 }
-#little-heart9{
-  @extend #little-heart1;
-  transform: rotate(3deg);
+
+#little-heart9 {
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
   left: 85%;
 }
-#little-heart10{
-  @extend #little-heart1;
+
+#little-heart10 {
   height: 50px;
   width: 50px;
   left: 95%;
-  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
 }
 
-.message-container{
+.message-container {
   opacity: 0;
 }
 
-@media only screen and (max-width : 540px) {
-  main{
+@media only screen and (max-width: 540px) {
+  main {
     visibility: hidden;
   }
-  
-  .message-container{
+
+  .message-container {
     opacity: 1 !important;
     width: 100%;
     position: absolute;
     top: 50%;
     text-align: center;
-    .message{
-      color: white;
-      font-weight: 100;
-      font-size: 3em;
-      width: 100%;
-      white-space: nowrap;
-      font-family: 'Mr De Haviland', cursive;
-    }
+  }
+  .message-container .message {
+    color: white;
+    font-weight: 100;
+    font-size: 3em;
+    width: 100%;
+    white-space: nowrap;
+    font-family: 'Mr De Haviland', cursive;
   }
 }
-
-
