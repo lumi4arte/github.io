@@ -5,6 +5,9 @@
 */
 $(window).load(function () {
     $('.loading').delay(7000).fadeOut('slow');
+	setTimeout(function(){
+		window.location.replace('/home.html');
+	}, 7500)
 });
 (function($) {
 
